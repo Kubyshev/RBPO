@@ -23,4 +23,6 @@ public interface RecipeService {
     RecipeDto updateRecipe(Recipe Recipe);
 
     void deleteRecipe(String id);
+
+    RecipeDto getRecipeByMetka(String metka) throws RecipeNotFoundException;
 }

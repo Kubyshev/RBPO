@@ -46,6 +46,11 @@ public class RecipeController {
     public ResponseEntity<RecipeDto> getRecipeByName(@PathVariable String name) throws RecipeNotFoundException {
         return ResponseEntity.ok(RecipeService.getRecipeByName(name));
     }
+    @GetMapping("/Recipes/find/{metka}")
+    @PreAuthorize("hasAuthority('read')")
+    public ResponseEntity<RecipeDto> getRecipeByMetka(@PathVariable String metka) throws RecipeNotFoundException {
+        return ResponseEntity.ok(RecipeService.getRecipeByMetka(metka));
+    }
 
     @PostMapping("/Recipes")
     @PreAuthorize("hasAuthority('modification')")

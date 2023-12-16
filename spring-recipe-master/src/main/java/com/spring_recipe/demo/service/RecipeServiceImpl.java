@@ -64,4 +64,11 @@ public class RecipeServiceImpl implements RecipeService {
     public void deleteRecipe(String id) {
         recipeRepository.deleteById(UUID.fromString(id));
     }
+    @Override
+    public RecipeDto getRecipeByMetka(String metka) throws RecipeNotFoundException {
+        return recipeRepository.findByMetka(metka).stream()
+                .map(RecipeMappingUtil::mapToRecipeDto)
+                .findFirst()
+                .orElseThrow(() -> new RecipeNotFoundException(metka));
+    }
 }
