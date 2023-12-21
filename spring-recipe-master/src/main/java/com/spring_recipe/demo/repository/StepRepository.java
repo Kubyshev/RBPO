@@ -13,6 +13,7 @@ public interface StepRepository extends JpaRepository<Step, UUID> {
     @Query(value = "SELECT p FROM Step p")
     List<Step> getAll();
     Optional<Step> findById(UUID id);
+    Optional<Step> findByName(String name);
 
     boolean existsById(UUID id);
 }

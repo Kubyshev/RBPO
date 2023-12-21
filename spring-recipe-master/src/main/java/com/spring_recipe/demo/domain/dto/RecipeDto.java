@@ -17,7 +17,7 @@ public class RecipeDto {
     private int userId;
     private String description;
     private String image;
-    private UUID stepId;
+    private String[] steps ;
     private LocalDateTime requestTime;
     private String metka;
 }

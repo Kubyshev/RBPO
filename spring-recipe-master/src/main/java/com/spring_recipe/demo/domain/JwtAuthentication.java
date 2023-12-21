@@ -1,5 +1,7 @@
 package com.spring_recipe.demo.domain;
 
+import com.spring_recipe.demo.domain.entity.ApplicationUserRole;
+import com.spring_recipe.demo.domain.entity.Permission;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.Authentication;
@@ -7,16 +9,16 @@ import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;
 import java.util.Set;
-import java.util.stream.Collectors.toSet;
 
-    @Getter
+
+   /* @Getter
     @Setter
     public class JwtAuthentication implements Authentication {
 
         private boolean authenticated;
         private String Name;
         private String Email;
-        private Set<Role> roles;
+        private Set<Permission> roles;
 
         @Override
         public Collection<? extends GrantedAuthority> getAuthorities() { return roles; }
@@ -38,8 +40,8 @@ import java.util.stream.Collectors.toSet;
             this.authenticated = isAuthenticated;
         }
 
-        @Override
+
         public String getEmail() { return Email; }
 
-    }
+    }*/
 

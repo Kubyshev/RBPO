@@ -17,4 +17,6 @@ public interface StepService {
     StepDto updateStep(Step Step);
 
     void deleteStep(String StepId);
+
+    StepDto createStep(Step step);
 }

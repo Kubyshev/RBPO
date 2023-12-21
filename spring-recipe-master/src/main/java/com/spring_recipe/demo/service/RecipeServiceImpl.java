@@ -50,6 +50,15 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
+    @Transactional
+    public RecipeDto createRecipe(Recipe request) throws RecipeAlreadyExistException {
+        if (!recipeRepository.existsByName(request.getName())) {
+            return mapToRecipeDto(recipeRepository.save(request));
+        }
+        throw new RecipeAlreadyExistException(request.getName());
+    }
+
+    @Override
     public List<Recipe> getAllRecipes() {
         return recipeRepository.getAll();
     }

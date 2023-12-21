@@ -25,4 +25,7 @@ public interface RecipeService {
     void deleteRecipe(String id);
 
     RecipeDto getRecipeByMetka(String metka) throws RecipeNotFoundException;
+
+    RecipeDto createRecipe(Recipe Recipe) throws RecipeAlreadyExistException;
+
 }

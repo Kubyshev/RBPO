@@ -41,6 +41,11 @@ public class StepServiceImpl implements StepService {
 
     @Override
     @Transactional
+    public StepDto createStep(Step step) {
+        return mapToStepDto(repository.save(step));
+    }
+    @Override
+    @Transactional
     public StepDto updateStep(Step step) {
         return mapToStepDto(repository.save(step));
     }
@@ -49,4 +54,5 @@ public class StepServiceImpl implements StepService {
     public void deleteStep(String id) {
         repository.deleteById(UUID.fromString(id));
     }
+
 }

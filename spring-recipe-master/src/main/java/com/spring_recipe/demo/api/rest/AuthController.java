@@ -2,7 +2,7 @@ package com.spring_recipe.demo.api.rest;
 
 import com.spring_recipe.demo.domain.JwtResponse;
 import com.spring_recipe.demo.domain.RefreshJwtRequest;
-import com.spring_recipe.demo.service.AuthService;
+//import com.spring_recipe.demo.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import com.spring_recipe.demo.domain.JwtRequest;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +26,7 @@ public class AuthController {
         return "success";
     }
 
-    private final AuthService authService;
+   /* private final AuthService authService;
 
     @PostMapping("Email")
     public ResponseEntity<JwtResponse> Email(@RequestBody JwtRequest authRequest) {
@@ -44,6 +44,6 @@ public class AuthController {
     public ResponseEntity<JwtResponse> getNewRefreshToken(@RequestBody RefreshJwtRequest request) {
         final JwtResponse token = authService.refresh(request.getRefreshToken());
         return ResponseEntity.ok(token);
-    }
+    }*/
 
 }

@@ -1,5 +1,5 @@
 package com.spring_recipe.demo.api.rest;
-import lombok.RequiredArgsConstructor;
+/*import lombok.RequiredArgsConstructor;
 import com.spring_recipe.demo.domain.JwtAuthentication;
 import com.spring_recipe.demo.service.AuthService;
 import org.springframework.http.ResponseEntity;
@@ -32,4 +32,4 @@ public class Controller {
         return ResponseEntity.ok("Hello writer" + authInfo.getPrincipal());}
 
 
-}
+}*/

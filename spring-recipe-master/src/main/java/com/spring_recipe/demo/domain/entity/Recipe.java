@@ -36,4 +36,5 @@ public class Recipe {
 
     @Column
     private String metka;
+
 }

@@ -1,5 +1,5 @@
 package com.spring_recipe.demo.service;
-
+/*
 import io.jsonwebtoken.Claims;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -69,4 +69,4 @@ public class AuthService { private final ApplicationUserRepository userService;
         return (JwtAuthentication) SecurityContextHolder.getContext().getAuthentication();
     }
 
-}
+}*/
